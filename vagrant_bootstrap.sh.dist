@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+sudo su
+rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+
+yum install -y python-pip
+pip install virtualenv
+
+cd /vagrant
+virtualenv env --always-copy

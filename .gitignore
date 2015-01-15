@@ -1,2 +1,6 @@
 .idea/
+.vagrant/
+env/
 *.pyc
+vagrant_bootstrap.sh
+Vagrantfile

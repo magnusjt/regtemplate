@@ -1,3 +1,6 @@
+import re
+from itertools import izip
+
 class RegTemplate:
     def __init__(self, base_dir=None):
         self.base_dir  = base_dir
@@ -7,7 +10,8 @@ class RegTemplate:
         self.rule_dflt = '\S+'
         self.rules     = {
             'digits': '\d+',
-            'word':   '\w+'
+            'word':   '\w+',
+            'float':  '\d+\.\d+'
         }
         self._pos       = 0
         self._template  = ''

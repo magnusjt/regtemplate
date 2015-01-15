@@ -3,6 +3,8 @@ Python class for parsing a template into a regex, used for matching into name-va
 
 ## Usage
 
+See also examples in the examples folder.
+
 ### Basic usage example:
 ````
 template = RegTemplate('some/dir')

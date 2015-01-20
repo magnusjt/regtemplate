@@ -23,6 +23,7 @@ class RegTemplate:
     def parse_template_from_file(self, filename):
         with open(self.base_dir + '/' + filename) as f:
             self.parse_template(f.read())
+		return self
 
     def parse_template(self, template):
         """
@@ -46,6 +47,7 @@ class RegTemplate:
         if self._pos < len(self._template):
             self._add_raw(self._template[self._pos:len(self._template)-1])
         self._compiled = re.compile(self._reg)
+		return self
 
     def match(self, string):
         if self.ignore_whitespace:
